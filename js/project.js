@@ -44,7 +44,7 @@ function chooseRecipe(datas) {
 
 }
 
-
+$('#rulers').hide();
 $('#sreyorn').hide();
 var nbDefault = 1;
 function getRecipe(recipeId) {
@@ -54,10 +54,11 @@ function getRecipe(recipeId) {
             eachRecipe(element.name,element.iconUrl);
             eachIngredient(element.ingredients);
              $('#member').val(element.nbGuests);
-            $('#sreyorn').show();
             guestDefault = $('#member').val();
         }
     })
+    $('#sreyorn').show();
+    $('#rulers').show();
 }
 function updateRecipe(recipeId,guest){
     apiData.forEach(element => {
@@ -106,8 +107,12 @@ function decrease() {
 function eachRecipe(name,image){
     var recipes ="";
     recipes += `
-        <strong>${name}</strong>
-        <img src = "${image}" width = "80">
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3"><strong>${name}</strong></div>
+    <div class="col-3"><img src = "${image}" width = "80"></div>
+    <div class="col-3"></div>
+    </div>
     `;
     $('#recipes').html(recipes);
 }
@@ -117,9 +122,9 @@ function eachIngredient(ing) {
         ingredient += `
         <tr>
             <td><img src = "${element.iconUrl}" width = "40"></td>
-            <td>${element.name}</td>
             <td>${element.quantity}</td>
             <td>${element.unit[0]}</td>
+            <td>${element.name}</td>
         </tr>
       `
     })
