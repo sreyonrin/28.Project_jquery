@@ -136,8 +136,6 @@ function getMember(){
 var updateIngredient = (ing,) => {
     var ingredient = "";
     ing.forEach(element => {
-       
-      console.log(add)
        ingredient += `
        <tr>
            <td><img src = "${element.iconUrl}" width = "50"></td>
