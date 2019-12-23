@@ -118,8 +118,8 @@ function eachRecipe(name,image){
     recipes += `
     <div class="row">
     <div class="col-3"></div>
-    <div class="col-3"><strong>${name} </strong></div>
-    <div class="col-3"><img src = "${image}" width = "150"></div>
+    <div class="col-3"><h2 class ="text-center text-white"><strong>${name}</strong></h2></div>
+    <div class="col-3"><img src = "${image}"class="rounded" width = "150" ></div>
     <div class="col-3"></div>
     </div>
     `;
@@ -148,7 +148,7 @@ var updateIngredient = (ing,) => {
        ingredient += `
        <tr>
            <td><img src = "${element.iconUrl}" width = "70"></td>
-           <td>${element.name}</td>
+           <td>${element.name}"</td>
            <td>${ add }</td>
            <td>${element.unit[0]}</td>
        </tr>
