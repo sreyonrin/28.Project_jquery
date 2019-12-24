@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
-        .ruler{
-        border-left: 2px solid black;
-        height: 50%;
-        position: absolute;
-        left: 50%;
-        }
-        #image{
-            background-image: url(image/back.jpg);
-            background-size: cover;
-        }
-        #ingredient{
-            background-color: white;
-            border: 2px solid coral;
-        }
+    #step {
+        background-color: white;
+        border: 2px solid green;
         
-        
-    </style>
+    }
+
+    #image {
+        background-image: url(image/back.jpg);
+        background-size: cover;
+    }
+
+    #ingredient {
+        background-color: white;
+        border: 2px solid green;
+      
+    }
+</style>
+
 <body id="image">
-  <div class="container mt-5">
-      <div class="row mb-5">
-          <div class="col-4"></div>
-          <div class="col-4">
-              <select class="form-control" id="chooseRecipe">
-                  <option value="" disabled selected>Choose recipe</option>
-              </select>
-          </div>
-          <div class="col-4"></div>
-      </div>
-      <div class="container">
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <select class="form-control" id="chooseRecipe">
+                    <option value="" disabled selected>Choose recipe</option>
+                </select>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="container">
             <div id="recipes"></div>
-      </div>
-      <div class="row">
-          <div class="col-4" id ="recipes"></div>
-          <div class="col-4" id ="sreyorn" >
-              <div class="input-group mt-4">
-                  <div class="input-group-append">
-                      <button class="btn btn-primary" type="button" id ="minus">&minus;</button>
-                  </div>
-                  <input type="text" class="form-control text-center" disabled id ="member" value="1">
-                  <div class="input-group-append">
-                      <button class="btn btn-primary" type="button" id ="add">&plus;</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-4" ></div>
-      </div>
-      <div class="row mt-4">
-          <div class="col-6" >
-              <table class="table table-borderless" id="ingredient"></table>
-          </div>
+        </div>
+        <div class="row">
+            <div class="col-4" id="recipes"></div>
+            <div class="col-4" id="sreyorn">
+                <marquee>
+                    <h3 class="text-center text-white">Person Of member</h3>
+                </marquee>
 
-          <div class="ruler" id ="rulers"></div>
+                <div class="input-group mt-4">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="minus">&minus;</button>
+                    </div>
+                    <input type="text" class="form-control text-center" disabled id="member" value="1">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="add">&plus;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row mt-4">
 
-          <div class="col-6" id ="step">
+            <div class="col-6">
+                <table class="table table-borderless" id="ingredient"></table>
+            </div>
 
-          </div>
-      </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/project.js"></script>
+
+            <div class="col-6" id="step">
+
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/project.js"></script>
 </body>
-</html>
 
+</html>
